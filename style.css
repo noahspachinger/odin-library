@@ -1,0 +1,46 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: "Playfair Display", serif;
+}
+h1 {
+    font-family: "Playfair Display", serif;
+    text-align: center;
+    margin-top: 3vh;
+    font-size: 4em;
+    margin-bottom: 3vh;
+}
+
+#bookshelf {
+    width: 100vw;
+    display: grid;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 4vw;
+}
+
+.books {
+    background-color: blue;
+    width: 14vw;
+    height: 21vw;
+    margin-left: 3vw;
+    margin-right: 3vw;
+    border-radius: 2vw;
+    text-align: center;
+}
+
+.booktitle {
+    font-size: 3.5vw;
+    line-height: 100%;
+    padding-top: 2vw;
+}
+
+.bookauthor {
+    font-size: 1vw;
+}
+
+.bookstatus {
+    font-size: 1vw;
+    padding-top: 5vw;
+}
