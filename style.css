@@ -12,28 +12,33 @@ h1 {
 }
 
 #bookshelf {
-    width: 100vw;
+    width: 100%;
     display: grid;
     height: auto;
     display: flex;
     flex-wrap: wrap;
     row-gap: 4vw;
+    margin-bottom: 5vh;
 }
 
 .books {
-    background-color: blue;
+    background-color: #D7C8B4;
     width: 14vw;
     height: 21vw;
-    margin-left: 3vw;
-    margin-right: 3vw;
+    margin-left: 2.9vw;
+    margin-right: 2.9vw;
     border-radius: 2vw;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 1vh;
 }
 
 .booktitle {
     font-size: 3.5vw;
     line-height: 100%;
     padding-top: 2vw;
+    flex-grow: 1;
 }
 
 .bookauthor {
@@ -42,5 +47,36 @@ h1 {
 
 .bookstatus {
     font-size: 1vw;
-    padding-top: 5vw;
+    text-align: center;
+    align-items: flex-end;
 }
+
+#buttondiv {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 3vh;
+}
+
+#opendialog {
+    background-color: #D7C8B4;
+    height: 5vh;
+    width: 9vw;
+    border-radius: 12px;
+    color: white;
+    border: #D7C8B4 3px solid;
+}
+
+#opendialog:hover {
+    animation: start 0.5s both;
+    
+}
+
+@keyframes start {
+    100% {
+        background-color: white;
+        color: #D7C8B4;
+        border: #D7C8B4 3px solid;
+    }
+}
+
