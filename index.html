@@ -12,9 +12,15 @@
 </head>
 <body>
     <h1>The Library</h1>
-    <dialog>
-        <p>crazy dialog</p>
-        <button id="close">Close</button>
+    <dialog id="newbookdialog">
+        <form>
+            <input type="text" placeholder="Title of the book" class="textinput">
+            <input type="text" placeholder="Author of the book" class="textinput">
+            <label for="readstatus">Have you read the book?</label>
+            <input type="radio" name="readstatus" value="yes">yes
+            <input type="radio" name="readstatus" value="no">no
+        </form>
+        <button id="closedialog">x</button>
     </dialog>
     <div id="buttondiv">
         <button id="opendialog">Add new book</button>
@@ -35,7 +41,7 @@
         <div class="books"></div>
         <div class="books"></div>
         <div class="books"></div>
-    </div>
+    </div>f
 
 </body>
 </html>

@@ -53,6 +53,17 @@ addBookToLibrary(Bible);
 
 
 //New Book button that displays a form where the user can enter new books
+let dialog = document.getElementById("newbookdialog");
+let openButton = document.getElementById("opendialog");
+let closeButton = document.getElementById("closedialog");
+
+openButton.addEventListener("click", () => {
+    dialog.showModal();
+});
+
+closeButton.addEventListener("click", () => {
+    dialog.close();
+});
 //Delete button for every book
 //Button that changes the read status
 
