@@ -86,5 +86,19 @@ h1 {
 
 #newbookdialog {
     margin: auto;
+    border: none;
+}
+
+#submitButton {
+    background-color: #D7C8B4;
+    height: 5vh;
+    width: 9vw;
+    border-radius: 12px;
+    color: white;
+    border: #D7C8B4 3px solid;
+}
+
+#submitButton:hover {
+    animation: start 0.5s both;
 }
 

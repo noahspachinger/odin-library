@@ -13,14 +13,15 @@
 <body>
     <h1>The Library</h1>
     <dialog id="newbookdialog">
-        <form>
-            <input type="text" placeholder="Title of the book" class="textinput">
-            <input type="text" placeholder="Author of the book" class="textinput">
-            <label for="readstatus">Have you read the book?</label>
-            <input type="radio" name="readstatus" value="yes">yes
-            <input type="radio" name="readstatus" value="no">no
-        </form>
         <button id="closedialog">x</button>
+        <form>
+            <input type="text" placeholder="Title of the book" class="textinput"><br>
+            <input type="text" placeholder="Author of the book" class="textinput"><br>
+            <label for="readstatus">Have you read the book?</label><br>
+            <input type="radio" name="readstatus" value="yes">yes
+            <input type="radio" name="readstatus" value="no">no<br>
+            <button type="submit" id="submitButton">Add to Library</button>
+        </form>
     </dialog>
     <div id="buttondiv">
         <button id="opendialog">Add new book</button>
