@@ -3,12 +3,18 @@
     margin: 0;
     font-family: "Playfair Display", serif;
 }
+
+body {
+    color: white;
+}
+
 h1 {
     font-family: "Playfair Display", serif;
     text-align: center;
     margin-top: 3vh;
     font-size: 4em;
     margin-bottom: 3vh;
+    color: black;
 }
 
 #bookshelf {
@@ -19,6 +25,7 @@ h1 {
     flex-wrap: wrap;
     row-gap: 4vw;
     margin-bottom: 5vh;
+    justify-content: center;
 }
 
 .books {
@@ -32,6 +39,7 @@ h1 {
     display: flex;
     flex-direction: column;
     padding-bottom: 1vh;
+    align-items: center;
 }
 
 .booktitle {
@@ -49,6 +57,7 @@ h1 {
     font-size: 1vw;
     text-align: center;
     align-items: flex-end;
+    margin-bottom: 20px;
 }
 
 #buttondiv {
@@ -56,6 +65,30 @@ h1 {
     width: 100%;
     justify-content: center;
     margin-bottom: 3vh;
+}
+
+#deletebutton {
+    font-size: 1.5rem;
+    background-color: #D7C8B4;
+    border: none;
+    margin-right: 5px;
+    color: white
+}
+
+#readbutton {
+    font-size: 1.5rem;
+    background-color: #D7C8B4;
+    border: none;
+    margin-left: 5px;
+    color: white;
+}
+
+#deletebutton:hover {
+    color:#a89c8c
+}
+
+#readbutton:hover {
+    color: #a89c8c;
 }
 
 #opendialog {
@@ -86,8 +119,8 @@ h1 {
 
 #newbookdialog {
     margin: auto;
-<<<<<<< HEAD
     border: none;
+    padding: 2vw;
 }
 
 #submitButton {
@@ -101,4 +134,38 @@ h1 {
 
 #submitButton:hover {
     animation: start 0.5s both;
+}
 
+#closedialog {
+    margin-bottom: 10px;
+    border: none;
+    background-color: unset;
+    font-size: 1rem;
+}
+
+#closedialog:hover {
+    color:#D7C8B4;
+}
+
+form {
+    text-align: center;
+}
+
+input {
+    margin: 10px 0;
+}
+
+.textinput {
+    padding: 5px;
+    width: 100%;
+}
+
+.radioinput {
+    text-align: center;
+}
+
+fieldset {
+    text-align: center;
+    margin-bottom: 20px;
+    color: grey;
+}

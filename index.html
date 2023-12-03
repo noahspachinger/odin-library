@@ -9,17 +9,22 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@800&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/f3747edbfe.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <h1>The Library</h1>
     <dialog id="newbookdialog">
-        <button id="closedialog">x</button>
+        <button id="closedialog">&#x2716</button>
         <form>
-            <input type="text" placeholder="Title of the book" class="textinput"><br>
-            <input type="text" placeholder="Author of the book" class="textinput"><br>
-            <label for="readstatus">Have you read the book?</label><br>
-            <input type="radio" name="readstatus" value="yes">yes
-            <input type="radio" name="readstatus" value="no">no<br>
+            <input type="text" placeholder="Title of the book" class="textinput" required><br>
+            <input type="text" placeholder="Author of the book" class="textinput" required><br>
+            <fieldset>
+                <legend>Have you read the book?</legend>
+                <input type="radio" name="readstatus" value="yes" class="radioinput" required>
+                <label>Yes</label>
+                <input type="radio" name="readstatus" value="no" class="radioinput" required>
+                <label>No</label>
+            </fieldset>
             <button type="submit" id="submitButton">Add to Library</button>
         </form>
     </dialog>
@@ -31,6 +36,10 @@
             <h2 class="booktitle">Book title</h2>
             <p class="bookauthor">author name</p>
             <p class="bookstatus">read status</p>
+            <div id="bookbuttons">
+                <button id="deletebutton"><i class="fa-solid fa-trash"></i></button>
+                <button id="readbutton"><i class="fa-solid fa-book-open-reader"></i></button>
+            </div>
         </div>
         <div class="books">
             <h2 class="booktitle">Book title</h2>
