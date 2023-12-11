@@ -18,6 +18,16 @@ let bookNumber = "";
 function displayBook() {
     let i = 0;
 
+    if(library[1] !== undefined) {
+        while (i+1 < library.length) {
+            document.querySelector("#book" + (i + 1)).remove();
+            i++;
+        }
+    }
+
+    i = 0;
+
+    //creating books and displaying them
     while (i < library.length) {
 
         bookNumber = "book" + (i + 1);
@@ -42,15 +52,24 @@ function displayBook() {
         currentBookStatus.classList.add("bookstatus");
         document.querySelector("#" + bookNumber).appendChild(currentBookStatus);
 
+        let currentBookButtonDiv = document.createElement("div");
+        currentBookButtonDiv.classList.add("buttondiv");
+        currentBookButtonDiv.setAttribute("id", "buttondiv" + bookNumber);
+        document.querySelector("#" + bookNumber).appendChild(currentBookButtonDiv);
+
+        let currentBookDeleteButton = document.createElement("button");
+        currentBookDeleteButton.innerHTML = "<i class='fa-solid fa-trash'>";
+        currentBookDeleteButton.classList.add("deletebutton");
+        document.querySelector("#buttondiv" + bookNumber).appendChild(currentBookDeleteButton);
+
+        let currentBookReadButton = document.createElement("button");
+        currentBookReadButton.innerHTML = "<i class='fa-solid fa-book-open-reader'>";
+        currentBookReadButton.classList.add("readbutton");
+        document.querySelector("#buttondiv" + bookNumber).appendChild(currentBookReadButton);
+
         i++
     }
 }
-
-let HP = new Book("Harry Potter", "JK Rowling", "read");
-addBookToLibrary(HP);
-let Bible = new Book("Bible", "Jesus", "not read yet");
-addBookToLibrary(Bible);
-
 
 //New Book button that displays a form where the user can enter new books
 let dialog = document.getElementById("newbookdialog");
@@ -64,6 +83,30 @@ openButton.addEventListener("click", () => {
 closeButton.addEventListener("click", () => {
     dialog.close();
 });
+
+//submit form
+    const form = document.forms[0];
+
+    form.addEventListener("submit", function(event){
+        event.preventDefault();
+        dialog.close();
+
+        let name = form.elements.name.value;
+        let author = form.elements.author.value;
+        let readstatus = "";
+        
+        if(form.elements.readstatus.value == "yes") {
+            readstatus = "already read";
+        }
+        else {
+            readstatus = "not read yet";
+        }
+
+        addBookToLibrary(new Book(name, author, readstatus));
+        displayBook();
+        form.reset();
+    });
+
 //Delete button for every book
 //Button that changes the read status
 

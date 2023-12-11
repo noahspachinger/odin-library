@@ -15,9 +15,9 @@
     <h1>The Library</h1>
     <dialog id="newbookdialog">
         <button id="closedialog">&#x2716</button>
-        <form>
-            <input type="text" placeholder="Title of the book" class="textinput" required><br>
-            <input type="text" placeholder="Author of the book" class="textinput" required><br>
+        <form action="" method="get" id="bookform">
+            <input type="text" placeholder="Title of the book" class="textinput" name="name" required><br>
+            <input type="text" placeholder="Author of the book" class="textinput" name="author" required><br>
             <fieldset>
                 <legend>Have you read the book?</legend>
                 <input type="radio" name="readstatus" value="yes" class="radioinput" required>
@@ -32,8 +32,8 @@
         <button id="opendialog">Add new book</button>
     </div>
     <div id="bookshelf">
-        <div class="books">
-            <h2 class="booktitle">Book title</h2>
+        <!--<div class="books">
+            <h2 class="booktitle" id="booktitle1"></h2>
             <p class="bookauthor">author name</p>
             <p class="bookstatus">read status</p>
             <div id="bookbuttons">
@@ -50,8 +50,8 @@
         <div class="books"></div>
         <div class="books"></div>
         <div class="books"></div>
-        <div class="books"></div>
-    </div>f
+        <div class="books"></div>-->
+    </div>
 
 </body>
 </html>
